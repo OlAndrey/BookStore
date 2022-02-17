@@ -102,8 +102,17 @@ nav {
   width: 100%;
 }
 
+.navbar-expand-lg .navbar-collapse {
+  justify-content: flex-end;
+}
+
+.form-inline {
+  border-radius: 5px;
+  border: 2px solid #85c469;
+}
+
 .navbar {
-  background-color: #f5f5f5;
+  background: linear-gradient(#fff, #ebebeb);
 }
 
 .navbar .container {
@@ -122,4 +131,92 @@ nav {
 .navbar .cart__title {
   flex: 100% 0 0;
   text-align: center;
+}
+
+.menu {
+  border: 1px solid #dedede;
+  border-right: 0;
+  border-left: 0;
+}
+
+.menu__list {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__item {
+  flex: 11.11% 0 0;
+  padding: 10px 0px;
+  text-align: center;
+  cursor: pointer;
+  transition: all .8s ease;
+}
+
+.menu__item:hover {
+  background-color: #8fd271;
+}
+
+.menu__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 19px;
+  font-family: "Segoe UI Symbol";
+  color: #5b5b5b;
+  line-height: 1.368;
+  text-align: center;
+  z-index: 146;
+}
+
+.menu__link:hover {
+  color: #ffffff;
+}
+
+.sidebar {
+  border: 1px solid #d6d6d6;
+}
+
+.side__list {
+  font-size: 24.333px;
+  font-family: "SegoeWP";
+  color: #6b6969;
+  line-height: 1.233;
+  text-align: left;
+}
+
+.side__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 17px;
+  font-family: "SegoeWPN";
+  color: #555454;
+  line-height: 1.739;
+}
+
+.submenu__link {
+  padding: 0 25px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 15.333px;
+  font-family: "Segoe UI Symbol";
+  color: #555454;
+  line-height: 1.739;
+}
+
+.submenu__link::after {
+  content: " ";
+  width: 100%;
+  height: 1px;
+  margin: 0 25px;
+  background-color: #d6d6d6;
+}
+
+.submenu__link:hover {
+  color: #fff;
+  background-color: #85c469;
 }
