@@ -6,6 +6,7 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="css/loading.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <title>Redux</title>
@@ -292,21 +293,38 @@
             Science Fiction
           </p>
           <div class="categories__body">
-            <div class="categories__block product">
-              <img src="image/book1.png" alt="book" class="product__img">
-              <h3 class="product__name">
-                The Hare With Amber Eyes
-              </h3>
-              <p class="product__price">
-                $50
-              </p>
-            </div>
+            <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+              <!--
+                This area is filled with js code
+              -->
+          </div>
+          <div class="main__pages pages display-none">
+            <ul class="pages__list">
+              <li class="pages__item">
+                <a href="#" class="pages__link">1</a>
+              </li>
+              <li class="pages__item">
+                <a href="#" class="pages__link">2</a>
+              </li>
+              <li class="pages__item">
+                <a href="#" class="pages__link active-page">3</a>
+              </li>
+              <li class="pages__item">
+                <a href="#" class="pages__link">4</a>
+              </li>
+              <li class="pages__item">
+                <a href="#" class="pages__link">5</a>
+              </li>
+              <li class="pages__item">
+                <a href="#" class="pages__link">6</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-<script src="js/script.js"></script>
+<script type="module" src="js/script.js"></script>
 </body>
 </html>
