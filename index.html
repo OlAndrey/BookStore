@@ -5,30 +5,79 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/all.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <title>Redux</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="dark">
+<body>
 
-<div class="container pt-5">
-  <h1 class="heading">
-    <span>Redux</span>
-    <button class="btn btn-info" id="theme">Сменить тему</button>
-  </h1>
+  <header class="header">
+    <div class="container">
+      <div class="header__body">
+        <ul class="header__menu">
+          <li class="header__menu-item">
+            <a href="#" class="header__menu-link">Sign in</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#" class="header__menu-link">My Account</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#" class="header__menu-link">Order Status</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#" class="header__menu-link">Help</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
 
-  <hr>
 
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title">Счетчик: <span id="counter"></span></h5>
-      <button class="btn btn-primary" id="add">Добавить</button>
-      <button class="btn btn-danger" id="sub">Убрать</button>
-      <button class="btn btn-success" id="async">Async</button>
+  <div class="navbar">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="image/logo.png" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>Search
+            </button>
+          </form>
+        </div>
+
+        <div class="collapse navbar-collapse">
+          <div class="cart">
+            <p class="cart__title">
+              <i class="fa-solid fa-cart-shopping"></i>&nbsp; Your cart (2 items)
+            </p>
+            <div class="cart__summ">$250.0</div>
+            <button type="button" class="btn btn-secondary">Checkout</button>
+          </div>
+        </div>
+        <div class="collapse navbar-collapse">
+          <div class="wish">
+            <div class="wish__icon"></div>
+            <div class="wish__text">
+              <i class="fa-solid fa-star"></i>
+              Wish list 20
+            </div>
+          </div>
+        </div>
+
+      </nav>
     </div>
   </div>
-</div>
+  
+
+
+
 <script src="js/script.js"></script>
 </body>
 </html>
