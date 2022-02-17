@@ -65,9 +65,19 @@ nav{width: 100%;}
 .navbar-expand-lg .navbar-collapse{
     justify-content: flex-end;
 }
-.form-inline{
-    border-radius: 5px;
-    border: 2px solid #85c469;
+.form{
+    &-inline{
+    border-radius: .4rem;
+    border: 5px solid #85c469;
+    }
+    &-control{
+        border-radius: 0;
+        border-color: #85c469;
+    }
+}
+.btn{
+    border: 0;
+    border-radius: 0;
 }
 .navbar{
     background: linear-gradient(#fff, #ebebeb);
@@ -126,23 +136,28 @@ nav{width: 100%;}
 }
 
 .main{
+    margin: 10px 0;
     &__menu{
 
     }
 }
 .side{
-
     &bar{
+        padding: 0;
         border: 1px solid #d6d6d6;
     }
-    &__list{
+    &__title{
         font-size: 24.333px;
         font-family: "SegoeWP";
         color: rgb(107, 105, 105);
         line-height: 1.233;
-        text-align: left;
+        padding: 10px 17px;
+        margin: 0;
+    }
+    &__list{
     }
     &__item{
+        padding: 0 20px;
 
     }
     &__link{
@@ -153,21 +168,29 @@ nav{width: 100%;}
         font-family: "SegoeWPN";
         color: rgb(85, 84, 84);
         line-height: 1.739;
+        transition: all .8 ease;
+        &:hover{
+            color: #000;
+        }
     }
 }
 .submenu{
     &__item{
 
+        border-bottom: 1px solid #d6d6d6 ;
     }
     &__link{
+        position: relative;
+        left: -20px;
         padding: 0 25px;
         display: block;
-        width: 100%;
+        width: calc(100% + 40px);
         height: 100%;
         font-size: 15.333px;
         font-family: "Segoe UI Symbol";
         color: rgb(85, 84, 84);
         line-height: 1.739;
+        transition: all 1s ease;
         &::after{
             content: " ";
             width: 100%;
@@ -181,6 +204,58 @@ nav{width: 100%;}
         }
     }
 }
+.active-link{
+    color: #fff;
+    background-color: #85c469;
+}
+
+.categories{
+    margin: 0 -8px 0 8px;
+    border: 1px solid #dedede;
+    &__title{
+        margin: 20px 25px;
+        font-size: 24.333px;
+        font-family: "SegoeWP";
+        color: rgb(70, 70, 70);
+        line-height: 1.233;
+    }
+    &__body{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    &__block{
+        flex: 15% 0 0;
+    }
+}
+
+.product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px 10px;
+    &__img{
+        border-radius: 2px;
+        box-shadow: 0 0 1px 1px #dadada;
+    }
+    &__name{
+        font-size: 15px;
+        font-family: "SegoeWPN";
+        color: rgb(89, 89, 89);
+        line-height: 1.067;
+        text-align: center;
+        padding: 15px 0 0 0;
+    }
+    &__price{
+        font-size: 21.667px;
+        font-family: "HelveticaLTStd";
+        color: rgb(240, 83, 86);
+        line-height: 0.923;
+        text-align: center;
+    }
+}
+
 
 
 

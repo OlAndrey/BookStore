@@ -107,8 +107,18 @@ nav {
 }
 
 .form-inline {
-  border-radius: 5px;
-  border: 2px solid #85c469;
+  border-radius: .4rem;
+  border: 5px solid #85c469;
+}
+
+.form-control {
+  border-radius: 0;
+  border-color: #85c469;
+}
+
+.btn {
+  border: 0;
+  border-radius: 0;
 }
 
 .navbar {
@@ -175,16 +185,26 @@ nav {
   color: #ffffff;
 }
 
+.main {
+  margin: 10px 0;
+}
+
 .sidebar {
+  padding: 0;
   border: 1px solid #d6d6d6;
 }
 
-.side__list {
+.side__title {
   font-size: 24.333px;
   font-family: "SegoeWP";
   color: #6b6969;
   line-height: 1.233;
-  text-align: left;
+  padding: 10px 17px;
+  margin: 0;
+}
+
+.side__item {
+  padding: 0 20px;
 }
 
 .side__link {
@@ -195,17 +215,29 @@ nav {
   font-family: "SegoeWPN";
   color: #555454;
   line-height: 1.739;
+  transition: all .8 ease;
+}
+
+.side__link:hover {
+  color: #000;
+}
+
+.submenu__item {
+  border-bottom: 1px solid #d6d6d6;
 }
 
 .submenu__link {
+  position: relative;
+  left: -20px;
   padding: 0 25px;
   display: block;
-  width: 100%;
+  width: calc(100% + 40px);
   height: 100%;
   font-size: 15.333px;
   font-family: "Segoe UI Symbol";
   color: #555454;
   line-height: 1.739;
+  transition: all 1s ease;
 }
 
 .submenu__link::after {
@@ -219,4 +251,62 @@ nav {
 .submenu__link:hover {
   color: #fff;
   background-color: #85c469;
+}
+
+.active-link {
+  color: #fff;
+  background-color: #85c469;
+}
+
+.categories {
+  margin: 0 -8px 0 8px;
+  border: 1px solid #dedede;
+}
+
+.categories__title {
+  margin: 20px 25px;
+  font-size: 24.333px;
+  font-family: "SegoeWP";
+  color: #464646;
+  line-height: 1.233;
+}
+
+.categories__body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.categories__block {
+  flex: 15% 0 0;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 25px 10px;
+}
+
+.product__img {
+  border-radius: 2px;
+  box-shadow: 0 0 1px 1px #dadada;
+}
+
+.product__name {
+  font-size: 15px;
+  font-family: "SegoeWPN";
+  color: #595959;
+  line-height: 1.067;
+  text-align: center;
+  padding: 15px 0 0 0;
+}
+
+.product__price {
+  font-size: 21.667px;
+  font-family: "HelveticaLTStd";
+  color: #f05356;
+  line-height: 0.923;
+  text-align: center;
 }
