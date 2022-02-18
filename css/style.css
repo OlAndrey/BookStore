@@ -349,6 +349,68 @@ nav {
   border-bottom: 3px solid #81bd66;
 }
 
+.footer {
+  background-color: #45443f;
+  margin: 15px 0 0 0;
+}
+
+.footerbar {
+  padding: 25px 0;
+}
+
+.footerbar__title {
+  font-size: 19.667px;
+  font-family: "SegoeWP";
+  color: #dddddd;
+  line-height: 1.017;
+}
+
+.footerbar__link {
+  display: block;
+  font-size: 13.667px;
+  font-family: "SegoeWP";
+  color: rgba(221, 221, 221, 0.702);
+  line-height: 1.756;
+  display: flex;
+  flex-direction: column;
+}
+
+.footerbar__link::after {
+  content: "";
+  width: 60%;
+  height: 1px;
+  background-color: #515258;
+}
+
+.footerbar__link:hover {
+  color: #fff;
+}
+
+.footer__card {
+  background-color: #302f30;
+  text-align: center;
+  padding: 30px 0 10px 0;
+}
+
+.footer__card p {
+  font-size: 19.667px;
+  font-family: "SegoeWP";
+  color: #dddddd;
+  line-height: 1.22;
+}
+
+.footer__copy {
+  background-color: #302f30;
+  font-size: 15.667px;
+  font-family: "SegoeWP";
+  color: #dddddd;
+  line-height: 1.532;
+  text-align: center;
+  padding: 20px 0 30px 0;
+  border-top: 1px solid #515351;
+  border-bottom: 3px solid #47433f;
+}
+
 .display-none {
   display: none;
 }
