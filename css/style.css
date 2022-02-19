@@ -354,8 +354,13 @@ nav {
   margin: 15px 0 0 0;
 }
 
+.footer__body .row {
+  justify-content: space-between;
+}
+
 .footerbar {
-  padding: 25px 0;
+  padding: 25px 10px 25px 0;
+  margin: 0 -10px 0 0;
 }
 
 .footerbar__title {
@@ -413,4 +418,28 @@ nav {
 
 .display-none {
   display: none;
+}
+
+@media (max-width: 991px) {
+  .menu {
+    display: none;
+  }
+  .side__title {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .sidebar {
+    display: none;
+  }
+  .categories {
+    margin: 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .footerbar {
+    display: none;
+  }
 }

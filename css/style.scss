@@ -292,8 +292,14 @@ nav{width: 100%;}
 .footer{
     background-color: #45443f;
     margin: 15px 0 0 0;
+    &__body{
+        .row{
+            justify-content: space-between;
+        }
+    }
     &bar{
-        padding: 25px 0;
+        padding: 25px 10px 25px 0;
+        margin: 0 -10px 0 0;
         &__title{
             font-size: 19.667px;
             font-family: "SegoeWP";
@@ -350,17 +356,27 @@ nav{width: 100%;}
     display: none;
 }
 
-@media (max-width: 992px) {
-
-
+@media (max-width: 991px) {
+    .menu{
+        display: none;
+    }
+    .side__title{
+        padding: 10px;
+    }
 }
 
-@media (max-width: 768px) {
-
-
+@media (max-width: 767px) {
+    .sidebar{
+        display: none;
+    }
+    .categories{
+        margin: 0;
+    }
 }
 
-@media (max-width: 576px) {
-
+@media (max-width: 575px) {
+    .footerbar{
+        display: none;
+    }
 
 }
