@@ -4,7 +4,7 @@ const block = document.querySelector(".categories__body");
 const div = document.querySelector(".lds-ring");
 const colapse = document.querySelectorAll(".collapse");
 const btn = document.querySelector(".navbar-toggler");
-
+console.log(colapse)
 btn.addEventListener('click', ()=>{
     colapse.forEach(e =>{
         e.classList.toggle("collapse")
@@ -18,7 +18,11 @@ setTimeout(() =>{
         block.insertAdjacentHTML('beforeend', `
             <div class="categories__block product">
                 <a href="#" class="block">
-                    <img src="${bookDate[i].image}" alt="book" class="product__img">
+                    <div class="product__image">
+                        ${bookDate[i].stock > 0 ? `<div class="stock">-${bookDate[i].stock}%</div> `: ""}
+                        
+                        <img src="${bookDate[i].image}" alt="book" class="product__img">
+                    </div>
                     <h3 class="product__name">
                     ${bookDate[i].name}
                     </h3>
