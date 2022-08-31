@@ -24,6 +24,7 @@ nav, footer, header, aside {
 
 html, body {
   width: 100%;
+  min-height: 100vh;
   font-size: 16px;
   line-height: 2rem;
   font-size: 16px;
@@ -71,6 +72,22 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.icon {
+  width: 1em;
+  position: relative;
+  top: .5em;
+}
+
+.icon-search {
+  top: .25em;
+  right: .35em;
+}
+
 .header {
   background-color: #424242;
   padding: 10px 0 5px 0;
@@ -97,6 +114,10 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 130;
 }
 
+.header__menu-link:hover {
+  color: #c2c2c2;
+}
+
 nav {
   width: 100%;
 }
@@ -118,6 +139,11 @@ nav {
 .btn {
   border: 0;
   border-radius: 0;
+}
+
+.wish {
+  width: auto;
+  text-align: center;
 }
 
 .navbar {
@@ -185,10 +211,12 @@ nav {
 }
 
 .main {
+  flex: 1;
   margin: 10px 0;
 }
 
 .sidebar {
+  max-height: 925px;
   padding: 0;
   border: 1px solid #d6d6d6;
 }
@@ -440,6 +468,12 @@ nav {
 }
 
 @media (max-width: 991px) {
+  .form-inline {
+    width: 60%;
+  }
+  .cart {
+    max-width: none;
+  }
   .navbar-body {
     display: flex;
     justify-content: flex-start;
@@ -454,19 +488,73 @@ nav {
 }
 
 @media (max-width: 767px) {
+  .navbar-brand img {
+    width: auto;
+  }
+  .form-inline {
+    width: 100%;
+  }
+  .form-control {
+    flex: 1;
+  }
+  .navbar .cart {
+    width: 100%;
+    max-width: none;
+  }
+  .wish {
+    width: 100%;
+  }
   .navbar-body {
     flex-direction: column;
     align-items: flex-start;
   }
   .sidebar {
-    display: none;
+    border-bottom: 0;
+  }
+  .side__item::after {
+    content: ">";
   }
   .categories {
     margin: 0;
+    border-top: 0;
+  }
+  .submenu {
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .submenu__item {
+    width: 25%;
+    margin: 0 10px;
+  }
+  .submenu__link {
+    position: static;
+    width: auto;
+    padding: 0 10px;
   }
 }
 
 @media (max-width: 575px) {
+  .navbar-brand img {
+    width: 80%;
+  }
+  .wish {
+    padding: 5px;
+  }
+  .main {
+    border-bottom: 1px solid #dedede;
+  }
+  .categories {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: none;
+  }
+  .sidebar {
+    display: none;
+  }
   .navbar-body {
     flex-direction: column;
     align-items: flex-start;
